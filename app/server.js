@@ -23,6 +23,10 @@ app.use(bodyParser.json());
 
 app.use('/api', apiRouter);
 
+app.get('/', (req, res) => {
+  res.send('hi');
+});
+
 // START THE SERVER
 // =============================================================================
 const port = process.env.PORT || 9090;

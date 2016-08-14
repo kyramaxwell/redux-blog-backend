@@ -12,6 +12,8 @@ export const createPost = (req, res) => {
   post.title = req.body.title;
   post.tags = req.body.tags;
   post.content = req.body.content;
+  post.author = req.user.username;
+  console.log(`USER: ${req.user}`);
   post.save()
   .then(result => {
     res.json({ message: 'Post created!' });

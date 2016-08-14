@@ -5,6 +5,7 @@ const PostSchema = new Schema({
   title: String,
   tags: String,
   content: String,
+  author: String,
 });
 
 // create model class
